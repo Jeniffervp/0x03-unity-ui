@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rigb;
     private int score = 0;
     public int health = 5;
+    public Text scoreText;
 
     public void Update()
     {
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "Pickup")
         {
             score += 1;
-            Debug.Log("Score: " + score);
+            SetScoreText();
             Destroy(other.gameObject);
         }
 
@@ -51,5 +52,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("You win!");
         }
+    }
+
+    void SetScoreText()
+    {
+        scoreText.text = "Score: " + score.ToString();
     }
 }

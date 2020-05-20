@@ -811,6 +811,7 @@ MonoBehaviour:
   speed: 500
   rigb: {fileID: 136276984}
   health: 5
+  scoreText: {fileID: 871807992}
 --- !u!1 &145548094
 GameObject:
   m_ObjectHideFlags: 0
