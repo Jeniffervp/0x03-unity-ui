@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
             winLoseBG.gameObject.SetActive(true);
             StartCoroutine(LoadScene(3));
         }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     public void FixedUpdate()
